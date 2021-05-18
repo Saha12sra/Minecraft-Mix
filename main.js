@@ -138,3 +138,55 @@ if(key_pressed=='39'){
     console.log("right");
 }
 }
+
+function up(){
+
+    if(player_y>=0){
+
+    player_y=player_y-block_height;
+    console.log("Block height"+block_height);
+    console.log("player_x"+player_x+"player_y"+player_y);
+    canvas.remove(player_object);
+    player_update();
+
+    }
+}
+
+function down(){
+
+    if(player_y<=500){
+
+    player_y=player_y+block_height;
+    console.log("Block height"+block_height);
+    console.log("player_x"+player_x+"player_y"+player_y);
+    canvas.remove(player_object);
+    player_update();
+
+    }
+}
+
+function left(){
+
+    if(player_x>=0){
+
+    player_x=player_x-block_width;
+    console.log("Block width"+block_width);
+    console.log("player_x"+player_x+"player_y"+player_y);
+    canvas.remove(player_object);
+    player_update();
+
+    }
+}
+
+function right(){
+
+    if(player_x<=850){
+
+    player_x=player_x+block_width;
+    console.log("Block width"+block_width);
+    console.log("player_x"+player_x+"player_y"+player_y);
+    canvas.remove(player_object);
+    player_update();
+
+    }
+}
